@@ -10,7 +10,7 @@ export const ContactsListSTyle = styled.ul`
 
 export const ContactsItem = styled.li`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 400px;
   height: 40px;
   margin-bottom: ${p => p.theme.space[2]}px;
