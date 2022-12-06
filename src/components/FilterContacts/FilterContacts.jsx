@@ -1,21 +1,25 @@
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
-
+import {
+  Label,
+  Input,
+  Wrapper,
+} from 'components/FilterContacts/FilterContacts.styled';
 export const FilterContacts = ({ value, onChange }) => {
   const filterId = nanoid();
 
   return (
-    <>
-      <label htmlFor={filterId}>
-        <input
+    <Wrapper>
+      <Label htmlFor={filterId}>
+        <Input
           type="text"
           title="Write name to find contact quickly"
           value={value}
           onChange={onChange}
           id={filterId}
-        ></input>
-      </label>
-    </>
+        ></Input>
+      </Label>
+    </Wrapper>
   );
 };
 

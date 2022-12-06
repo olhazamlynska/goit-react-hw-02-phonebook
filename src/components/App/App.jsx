@@ -6,6 +6,7 @@ import { Section } from 'components/Section/Section';
 import { PhonebookForm } from 'components/PhonebookForm/PhonebookForm';
 import { ContactsList } from 'components/ContactsList/ContactsList';
 import { FilterContacts } from 'components/FilterContacts/FilterContacts';
+import { Box } from 'components/Box/Box';
 
 export class App extends Component {
   state = {
@@ -68,7 +69,7 @@ export class App extends Component {
     const visibleContacts = this.findVisibleContacts();
 
     return (
-      <>
+      <Box as={'main'}>
         <Section title="Phonebook">
           <PhonebookForm onSubmit={this.addContact} />
         </Section>
@@ -80,7 +81,7 @@ export class App extends Component {
             onDelete={this.deleteContact}
           />
         </Section>
-      </>
+      </Box>
     );
   }
 }
