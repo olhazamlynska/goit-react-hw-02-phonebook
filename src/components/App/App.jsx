@@ -36,13 +36,17 @@ export class App extends Component {
 
     if (isAddedName) {
       Notify.failure(`We have already had contact with name ${name}`);
+      return false;
     } else if (isAddedNunber) {
       Notify.failure(`We have already had contact with number ${number}`);
+      return false;
     }
 
     this.setState(({ contacts }) => ({
       contacts: [newContact, ...contacts],
     }));
+
+    return true;
   };
 
   onChangeFilter = e => {
