@@ -33,6 +33,7 @@ export const Input = styled.input`
   }
   &::placeholder {
     color: ${p => p.theme.colors.accentColor};
+    font-weight: ${p => p.theme.fontWeights.normal};
   }
   &:hover::-webkit-input-placeholder {
     color: ${p => p.theme.colors.accentColor};

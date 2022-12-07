@@ -9,7 +9,13 @@ export const ContactsList = ({ contacts, onDelete }) => {
       <ContactsListSTyle>
         {contacts.map(({ id, name, number }) => {
           return (
-            <Contact key={id} name={name} number={number} onDelete={onDelete} />
+            <Contact
+              key={id}
+              id={id}
+              name={name}
+              number={number}
+              onDelete={onDelete}
+            />
           );
         })}
       </ContactsListSTyle>

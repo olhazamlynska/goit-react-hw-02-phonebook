@@ -67,6 +67,7 @@ export class App extends Component {
       contacts: prevState.contacts.filter(contact => contact.id !== contactId),
     }));
   };
+
   render() {
     const { filter } = this.state;
 
