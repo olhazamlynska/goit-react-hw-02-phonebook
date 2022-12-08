@@ -10,7 +10,9 @@ export const Contact = ({ id, name, number, onDelete }) => {
     <ContactsItem>
       <ContactsName>{name}:</ContactsName>
       <span>{number}</span>
-      <DeleteBtn onClick={() => onDelete(id)}>Delete</DeleteBtn>
+      <DeleteBtn onClick={() => onDelete(id)} aria-label="delete">
+        Delete
+      </DeleteBtn>
     </ContactsItem>
   );
 };

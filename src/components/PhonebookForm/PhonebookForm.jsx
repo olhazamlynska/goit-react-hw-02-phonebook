@@ -62,7 +62,9 @@ export class PhonebookForm extends Component {
             onChange={this.handleChange}
           />
         </Label>
-        <AddBtn type="submit">Add contact</AddBtn>
+        <AddBtn type="submit" aria-label="add contact">
+          Add contact
+        </AddBtn>
       </AllForm>
     );
   }
